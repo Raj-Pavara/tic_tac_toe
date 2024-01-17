@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[0][0].getText().charAt(0) == '-'){
+                        if(cell[0][0].getText().charAt(0) == ' '){
                             I=0;
                             J=0;
                             set_XO();
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[0][1].getText().charAt(0) == '-'){
+                        if(cell[0][1].getText().charAt(0) == ' '){
                             I=0;
                             J=1;
                             set_XO();
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[0][2].getText().charAt(0) == '-'){
+                        if(cell[0][2].getText().charAt(0) == ' '){
                             I=0;
                             J=2;
                             set_XO();
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[1][0].getText().charAt(0) == '-'){
+                        if(cell[1][0].getText().charAt(0) == ' '){
                             I=1;
                             J=0;
                             set_XO();
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[1][1].getText().charAt(0) == '-'){
+                        if(cell[1][1].getText().charAt(0) == ' '){
                             I=1;
                             J=1;
                             set_XO();
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[1][2].getText().charAt(0) == '-'){
+                        if(cell[1][2].getText().charAt(0) == ' '){
                             I=1;
                             J=2;
                             set_XO();
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[2][0].getText().charAt(0) == '-'){
+                        if(cell[2][0].getText().charAt(0) == ' '){
                             I=2;
                             J=0;
                             set_XO();
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[2][1].getText().charAt(0) == '-'){
+                        if(cell[2][1].getText().charAt(0) == ' '){
                             I=2;
                             J=1;
                             set_XO();
@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(cell[2][2].getText().charAt(0) == '-'){
+                        if(cell[2][2].getText().charAt(0) == ' '){
                             I=2;
                             J=2;
                             set_XO();
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         for (int i = 0; i < 3; i++) {
                             for (int j = 0; j < 3; j++) {
-                                cell[i][j].setText("-");
+                                cell[i][j].setText(" ");
                                 cell[i][j].setTextColor(Color.parseColor("#000000"));
                             }
                             Row[i][0] = 0;
@@ -293,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
                        if(Count != 0){
                            int lastrow = undo_count[Count - 1][0];
                            int lastcol = undo_count[Count - 1][1];
-                           cell[lastrow][lastcol].setText("-");
+                           cell[lastrow][lastcol].setText(" ");
                            cell[lastrow][lastcol].setTextColor(Color.parseColor("#000000"));
                            Count--;
                            if(color_player1 == 'G'){

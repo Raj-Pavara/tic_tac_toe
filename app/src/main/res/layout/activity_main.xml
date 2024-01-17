@@ -11,18 +11,6 @@
 
 <!--    Vertical first line-->
     <View
-        android:layout_width="2dp"
-        android:layout_height="210dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <!--    Vertical second line-->
-    <View
         android:id="@+id/view4"
         android:layout_width="2dp"
         android:layout_height="210dp"
@@ -35,7 +23,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
 
-    <!--    Vertical third line-->
+    <!--    Vertical second line-->
     <View
         android:id="@+id/view5"
         android:layout_width="2dp"
@@ -48,34 +36,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
-    <!--    Vertical fourth line-->
-    <View
-        android:layout_width="2dp"
-        android:layout_height="210dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.740"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
 
     <!--    Horizontal first line-->
-    <View
-        android:id="@+id/view6"
-        android:layout_width="210dp"
-        android:layout_height="2dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452"
-       android:layout_marginBottom="140dp"
-        />
-
-    <!--    Horizontal second line-->
     <View
         android:id="@+id/view7"
         android:layout_width="209dp"
@@ -88,7 +50,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.455" />
 
-    <!--    Horizontal third line-->
+
+    <!--    Horizontal second line-->
     <View
         android:id="@+id/view"
         android:layout_width="208dp"
@@ -101,21 +64,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.545" />
 
-    <!--    Horizontal fourth line-->
-    <View
-        android:id="@+id/view8"
-        android:layout_width="208dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="140dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.554" />
-
-
 
 
     <!--    TextView for Each cell-->
@@ -124,7 +72,7 @@
         android:layout_width="67dp"
         android:layout_height="64dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -139,7 +87,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -154,7 +102,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -169,7 +117,7 @@
         android:layout_width="64dp"
         android:layout_height="61dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -184,7 +132,7 @@
         android:layout_width="72dp"
         android:layout_height="67dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -198,7 +146,7 @@
         android:layout_width="72dp"
         android:layout_height="67dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -212,7 +160,7 @@
         android:layout_width="72dp"
         android:layout_height="67dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -227,7 +175,7 @@
         android:layout_width="72dp"
         android:layout_height="67dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -242,7 +190,7 @@
         android:layout_width="72dp"
         android:layout_height="67dp"
         android:paddingLeft="20dp"
-        android:text="-"
+        android:text=" "
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -253,7 +201,7 @@
         app:layout_constraintVertical_bias="0.597" />
 
 
-<!--    player textview -->
+<!--    player indicator -->
 
     <TextView
         android:id="@+id/player1"
@@ -269,7 +217,7 @@
         app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.200" />
 
     <TextView
         android:id="@+id/player2"
@@ -285,13 +233,25 @@
         app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.200" />
 
 
-<!--    exit button-->
 
-    <!--    reset button-->
+    <!--    undo button-->
+    <Button
+        android:id="@+id/Undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Undo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
 
+
+    <!--    exit button-->
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
@@ -304,6 +264,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.84" />
 
+
+    <!--    reset button-->
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
@@ -317,18 +279,5 @@
         app:layout_constraintVertical_bias="0.84" />
 
 
-<!--    undo button-->
-
-    <Button
-        android:id="@+id/Undo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Undo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
