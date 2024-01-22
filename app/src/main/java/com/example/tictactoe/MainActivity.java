@@ -7,7 +7,11 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,8 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     //Initialization of Array and variable.
     TextView cell[][] = new TextView[3][3];
-    TextView player1,player2;
-    Button Exit,Reset,Undo;
+    EditText player1,player2;
+    TextView Exit,Reset,Undo;
+
+    //variables for custom toast.
+    View custom_toast_view;
+    Toast t;
+    TextView tv;
 
     int diagonal_1[] = new int[2];  //diagonal_1[0] indicate number of X in first diagonal and diagonal_1[1] indicate number of O in first diagonal
     int diagonal_2[] = new int[2];  //diagonal_2[0] indicate number of X in second diagonal and diagonal_2[1] indicate number of O in second diagonals
@@ -58,12 +67,18 @@ public class MainActivity extends AppCompatActivity {
         cell[2][1] = (TextView)findViewById(R.id.cell21);
         cell[2][2] = (TextView)findViewById(R.id.cell22);
 
-        player1 = (TextView)findViewById(R.id.player1);
-        player2 = (TextView)findViewById(R.id.player2);
+        player1 = (EditText) findViewById(R.id.player1);
+        player2 = (EditText) findViewById(R.id.player2);
 
-        Exit = (Button)findViewById(R.id.exit);
-        Reset = (Button)findViewById(R.id.reset);
-        Undo = (Button)findViewById(R.id.Undo);
+        Exit = (TextView)findViewById(R.id.exit);
+        Reset = (TextView)findViewById(R.id.reset);
+        Undo = (TextView)findViewById(R.id.Undo);
+
+       custom_toast_view = getLayoutInflater().inflate(R.layout.custom_toast,(ViewGroup) findViewById(R.id.viewgroup_customtoast));
+        t = new Toast(getApplicationContext());
+        tv= custom_toast_view.findViewById(R.id.textView_customtoast);
+        t.setDuration(Toast.LENGTH_SHORT);
+
     }
 
 
@@ -74,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[0][0].getText().charAt(0) == ' '){
                             I=0;
                             J=0;
@@ -81,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -91,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[0][1].getText().charAt(0) == ' '){
                             I=0;
                             J=1;
@@ -98,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -108,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[0][2].getText().charAt(0) == ' '){
                             I=0;
                             J=2;
@@ -115,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -125,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[1][0].getText().charAt(0) == ' '){
                             I=1;
                             J=0;
@@ -132,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -142,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[1][1].getText().charAt(0) == ' '){
                             I=1;
                             J=1;
@@ -149,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -159,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[1][2].getText().charAt(0) == ' '){
                             I=1;
                             J=2;
@@ -166,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -176,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[2][0].getText().charAt(0) == ' '){
                             I=2;
                             J=0;
@@ -183,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -193,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[2][1].getText().charAt(0) == ' '){
                             I=2;
                             J=1;
@@ -200,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -210,6 +233,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        funz();
                         if(cell[2][2].getText().charAt(0) == ' '){
                             I=2;
                             J=2;
@@ -217,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                             isFinish();
                         }
                         else{
-                            Toast.makeText(getApplicationContext(), "please enter your choice at another cell", Toast.LENGTH_SHORT).show();
+                            toast("please enter your choice at another cell");
                         }
                     }
                 }
@@ -327,6 +351,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+
+
     }
 
 
@@ -364,7 +392,7 @@ public class MainActivity extends AppCompatActivity {
                 diagonal_2[0]++;
             }
             if (Row[I][0] == 3 || Col[J][0] == 3 || diagonal_1[0] == 3 || diagonal_2[0] ==3) {
-                Toast.makeText(getApplicationContext(), "player 1 was win", Toast.LENGTH_SHORT).show();
+               toast(player1.getText()+" was win");
                 Reset.callOnClick();
                 return;
             }
@@ -380,17 +408,35 @@ public class MainActivity extends AppCompatActivity {
                 diagonal_2[1]++;
             }
                if(Row[I][1] == 3 || Col[J][1] == 3 || diagonal_1[1] == 3 || diagonal_2[1] ==3){
-                   Toast.makeText(getApplicationContext(),"player 2 was win",Toast.LENGTH_SHORT).show();
+                   toast(player2.getText()+" was win");
                    Reset.callOnClick();
                    return;
                 }
             }
 
         if(Count == 9){
-            Toast.makeText(getApplicationContext(),"game was draw",Toast.LENGTH_SHORT).show();
+            toast("game was draw");
             Reset.callOnClick();
         }
 
     }
 
+
+    public void funz(){
+        //this function is set player1 and player2 name when you touch on any cell by default if you can't enter player's name.
+        if(player1.getText().toString().equals("")){
+            player1.setText("Player1");
+        }
+        if(player2.getText().toString().equals("")){
+            player2.setText("Player2");
+        }
+    }
+
+
+    public void toast(String text){
+
+    tv.setText(text);
+    t.setView(custom_toast_view);
+    t.show();
+    }
 }

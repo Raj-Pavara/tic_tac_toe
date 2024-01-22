@@ -17,6 +17,7 @@ The first player who is achieve a 3 X or 3 O are arrange in one horizontal or ve
 4. Exit :- you can use exit button for close your application<br/>
 5. Reset :- using reset button you can reset your game<br/>
 6. Automatic fill up :- when you touch on cell then cell is automatically filled up according to player's turn <br/>
+7. custom player name :- here you can set player's name according to your wish.
 
 **How to Start this game** <br/>
 
